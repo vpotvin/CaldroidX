@@ -1,4 +1,39 @@
-Caldroid
+CaldroidX
+========
+
+[![](https://jitpack.io/v/vpotvin/CaldroidX.svg)](https://jitpack.io/#vpotvin/CaldroidX)
+
+CaldroidX is the an updated version of the Android calendar library created by [@roomorama], originally found here: https://github.com/roomorama/Caldroid.
+
+The original library has not been updated for several years, but users of AndroidX know it has become incompatible with it and causes crashes on nested fragment detach. My version of this library simply updates the library to use AndroidX and removes a bit of code that causes that crash.
+
+I am only a single person who did this in my spare time, but I will attempt to keep the library updated with any further breaking changes from Android. Any pull requests made will be reviewed on on a "as I can get to it" basis.
+
+**Important** Due to the update to AndroidX this project now has a minSDK of 14.
+
+Installation
+========
+
+In your project level build.gradle:
+
+```	
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
+}
+```
+In your app level build.gradle
+```	
+dependencies {
+	 implementation 'com.github.vpotvin:caldroidx:1.0'
+}
+```
+
+Following are the contents of the original use instructions from https://github.com/roomorama/Caldroid (not including setup). They are up to date as of 11/05/2019. Please keep in mind that some of this information could be invalid due to changes in the AndroidX library and the higher minSDK. It is provided here simply as a reference.
+
+OG Readme and Use Instructions
 ========
 
 Caldroid is a fragment that display calendar with dates in a month. Caldroid can be used as embedded fragment, or as dialog fragment. User can also swipe left/right to navigate to different months.
@@ -14,23 +49,6 @@ Caldroid can be used with Android 2.2 and above. It is extracted from [official 
 
 If you found bugs specific to Caldroid, please open a new issue on Github. However for general Android questions (about layout, drawable, etc), you probably can find more information on StackOverflow.
 
-Setup
-=====
-
-**For Android Studio user**: add `compile 'com.roomorama:caldroid:3.0.1'` to your gradle build file.
-
-**For Maven user**:
-```
-<dependency>
-    <groupId>com.roomorama</groupId>
-    <artifactId>caldroid</artifactId>
-    <version>3.0.1</version>
-</dependency>
-```
-
-**For Eclipse/ADT user**: please see tag [eclipse_project](https://github.com/roomorama/Caldroid/releases/tag/eclipse_project), download the source codes, check out the CaldroidSample to see how the library works. However you are strongly recommended to use Maven or gradle, because this tag is no longer supported.
-
-To use in your project, reference the child library project as a library. If you see JAR mismatched error, replace your android-support-v4.jar to the jar inside Caldroid. Make sure you compile the project against Android 4.2 and above to allow nested fragment. See more at http://developer.android.com/about/versions/android-4.2.html#NestedFragments
 
 Features
 ========
