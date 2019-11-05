@@ -3,7 +3,7 @@ CaldroidX
 
 [![](https://jitpack.io/v/vpotvin/CaldroidX.svg)](https://jitpack.io/#vpotvin/CaldroidX)
 
-CaldroidX is the an updated version of the Android calendar library created by [@roomorama], originally found here: https://github.com/roomorama/Caldroid.
+CaldroidX is the an updated version of the Android calendar library created by @roomorama, originally found here: https://github.com/roomorama/Caldroid. It makes this library compatible with newer versions of Android fragments and AndroidX.
 
 The original library has not been updated for several years, but users of AndroidX know it has become incompatible with it and causes crashes on nested fragment detach. My version of this library simply updates the library to use AndroidX and removes a bit of code that causes that crash.
 
